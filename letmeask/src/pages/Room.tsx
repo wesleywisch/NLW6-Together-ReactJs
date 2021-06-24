@@ -20,7 +20,7 @@ type RoomParams = {
 }
 
 export function Room(){
-    const { user } = useAuth()
+    const { user, signOut } = useAuth()
     const params = useParams<RoomParams>();
     const [newQuestion, setNewQuestion] = useState('');
     const roomId = params.id
@@ -73,7 +73,7 @@ export function Room(){
 
                     <div>
                         <RoomCode code={roomId} />
-                        <Button isOutlined>Logout</Button>
+                        <Button onClick={signOut} isOutlined>Logout</Button>
                     </div>
                 </div>
             </header>
