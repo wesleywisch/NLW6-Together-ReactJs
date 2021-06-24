@@ -1,4 +1,60 @@
 #page-room{
+
+    &.dark{
+        background: #181818;
+        color: #fefefe;
+        height: 100%;
+
+        > header{
+            background: #181818;
+            border: 2px solid #29292e;
+        }
+
+        header > .content > div > .room-code{
+            background: #181818;
+            color: #fefefe;
+        }
+
+        header > .content > div > button{
+            background: #181818;
+        }
+
+        >main{
+            background: #181818;
+            height: 100%;
+
+            > form > textarea{
+                background: #29292e;
+                color: #fff;
+            }
+
+
+            .room-title > h1{
+                color: #fff;
+            }
+
+            .form-footer > .user-info > span{
+                color: #fff;
+            }
+
+            .question-list > .question{ 
+                background: #29292e;
+            }
+
+            .question-list > .question > p{
+                color: #fff;
+            }
+
+            .question-list > .question > footer > .user-info > span{
+                color: #fefefe;
+            }
+
+            
+        }
+
+
+    }
+
     header{
         padding: 24px;
         border-bottom: 1px solid #e2e2e2;
@@ -18,11 +74,34 @@
                 display: flex;
                 gap: 16px;
 
+                > .button{
+                    color: #e65061;
+                    border: 1px solid red;
+                    font-size: 14px;
+                }
+
                 button{
                     height: 40px;
                 }
             }
         }
+    }
+
+    .alternativeTheme{
+        position: absolute;
+        right: 5%;
+        top: 12%;
+
+        > button{
+            background-color: #29292e;
+            height: 60px;
+            width: 120px;
+            border-radius: 3rem;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        
     }
 
     main{
@@ -61,6 +140,7 @@
                 box-shadow: 0 2px 12px rgba(0,0,0,0.04);
                 resize: vertical;
                 min-height: 130px;
+                outline: none;
             }
 
             .form-footer{
