@@ -70,9 +70,10 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   }
 
   async function signOut(){
-    await auth.signOut();
+    if(user){await auth.signOut();
     setUser(undefined)
     history.push('/');
+    }
   }
 
     return (
