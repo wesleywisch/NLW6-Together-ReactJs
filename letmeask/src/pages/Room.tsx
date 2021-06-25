@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react';
 import { useParams } from 'react-router-dom';
 
 import logoImg from '../assets/images/logo.svg';
+import themeImg from '../assets/images/theme.png';
 
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
@@ -81,7 +82,7 @@ export function Room(){
             </header>
 
             <div className="alternativeTheme">
-                <button onClick={toggleTheme}>Mudar Tema</button>
+                <img src={themeImg} alt="Mudar o tema da página" onClick={toggleTheme} />
             </div>
 
             <main>

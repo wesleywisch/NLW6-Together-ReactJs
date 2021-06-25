@@ -4,6 +4,7 @@ import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';
 import checkImg from '../assets/images/check.svg';
 import answerImg from '../assets/images/answer.svg';
+import themeImg from '../assets/images/theme.png';
 
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
@@ -11,6 +12,7 @@ import { Question } from '../components/Question/Question';
 
 // import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
+import { useTheme } from '../hooks/useTheme';
 
 import { database } from '../services/firebase';
 
@@ -22,6 +24,7 @@ type RoomParams = {
 
 export function AdminRoom(){
     // const { user } = useAuth()
+    const { theme, toggleTheme } = useTheme();
     const history = useHistory();
     const params = useParams<RoomParams>();
     const roomId = params.id
@@ -57,7 +60,7 @@ export function AdminRoom(){
     }
 
     return(
-        <div id="page-room">
+        <div id="page-room" className={theme}>
             <header>
                 <div className="content">
                     <img src={logoImg} alt="Letmeask" />
@@ -67,6 +70,10 @@ export function AdminRoom(){
                     </div>
                 </div>
             </header>
+
+            <div className="alternativeTheme">
+                <img src={themeImg} alt="Mudar o tema da página" onClick={toggleTheme} />
+            </div>
 
             <main>
                 <div className="room-title">

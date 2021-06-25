@@ -27,6 +27,7 @@
             > form > textarea{
                 background: #29292e;
                 color: #fff;
+                box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1);
             }
 
 
@@ -98,14 +99,11 @@
 
     .alternativeTheme{
         position: absolute;
-        right: 5%;
+        right: 3%;
         top: 12%;
 
-        > button{
-            background-color: #29292e;
-            height: 60px;
-            width: 120px;
-            border-radius: 3rem;
+        > img{
+            width: 45px;
             border: none;
             color: #fff;
             cursor: pointer;
