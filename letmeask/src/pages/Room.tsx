@@ -73,7 +73,9 @@ export function Room(){
 
                     <div>
                         <RoomCode code={roomId} />
-                        <Button onClick={signOut} isOutlined>Logout</Button>
+                        {user?.id && (
+                            <Button onClick={signOut} isOutlined>Logout</Button>
+                        )}
                     </div>
                 </div>
             </header>
